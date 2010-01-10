@@ -11,7 +11,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw( );
 
-our $VERSION = '0.7';
+our $VERSION = '0.71';
 
 =head1 NAME
 
@@ -536,6 +536,7 @@ Drew Stephens <drew@dinomite.net>, http://dinomite.net
 Mark Grimes <mgrimes@cpan.org>, http://www.peculiarities.com
 Scott Lawrence (http://linkedin.com/in/scottdlawrence)
 Garrett Scott <garrett@gothik.org>, (http://www.gothik.org)
+Mark Allen <mrallen1@yahoo.com>
 
 =head1 SOURCE REPOSITORY
 
@@ -543,8 +544,8 @@ http://mac-itunes.googlecode.com
 
 =head1 SVN INFO
 
-$Revision: 78 $
-$Date: 2009-12-30 10:33:01 -0700 (Wed, 30 Dec 2009) $
+$Revision: 80 $
+$Date: 2010-01-09 23:54:31 -0700 (Sat, 09 Jan 2010) $
 $Author: drewgstephens $
 
 =head1 COPYRIGHT AND LICENSE
