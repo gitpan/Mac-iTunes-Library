@@ -11,7 +11,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw( );
 
-our $VERSION = '0.9';
+our $VERSION = '1.0';
 
 =head1 NAME
 
@@ -418,12 +418,8 @@ Mac::iTunes::Library::Item objects.
 
   # Assuming a previously created library
   %items = $library->items();
-  foreach my $artist (keys %items) {
-      my $artistSongs = $items{$artist};
-
-      foreach my $songName (keys %$artistSongs) {
-          my $artistSongItems = $artistSongs->{$songName};
-
+  while (($artist, $artistSongs) = each %items) {
+      while (($songName, artistSongItems) = each %$artistSongs) {
           foreach my $item (@$artistSongItems) {
               # Do something here to every item in the library
               print $song->name() . "\n";
@@ -533,10 +529,25 @@ Drew Stephens <drew@dinomite.net>, http://dinomite.net
 
 =head1 CONTRIBUTORS
 
-Mark Grimes <mgrimes@cpan.org>, http://www.peculiarities.com
-Scott Lawrence (http://linkedin.com/in/scottdlawrence)
-Garrett Scott <garrett@gothik.org>, (http://www.gothik.org)
+=over 4
+
+=item *
+
+Mark Grimes <mgrimes@cpan.org>, (L<http://www.peculiarities.com>)
+
+=item *
+
+Scott Lawrence (L<http://linkedin.com/in/scottdlawrence>)
+
+=item *
+
+Garrett Scott <garrett@gothik.org>, (L<http://www.gothik.org>)
+
+=item *
+
 Mark Allen <mrallen1@yahoo.com>
+
+=back
 
 =head1 SOURCE REPOSITORY
 
@@ -544,9 +555,7 @@ http://mac-itunes.googlecode.com
 
 =head1 SVN INFO
 
-$Revision: 86 $
-$Date: 2010-05-30 20:45:18 -0700 (Sun, 30 May 2010) $
-$Author: drewgstephens@gmail.com $
+$Revision: 90 $
 
 =head1 COPYRIGHT AND LICENSE
 

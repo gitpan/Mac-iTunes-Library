@@ -3,9 +3,7 @@
 
 =head1 SVN INFO
 
-$Revision: 84 $
-$Date: 2010-01-20 21:21:16 -0800 (Wed, 20 Jan 2010) $
-$Author: drewgstephens $
+$Revision: 90 $
 
 =head1 AUTHOR
 
